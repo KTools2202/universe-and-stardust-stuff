@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ElementBlock from "../components/ElementBlock.astro";
+
+const elements = [
+    { name: "Hydrogen", symbol: "H", atomicNumber: 1, percentageInHumans: 10 },
+    { name: "Carbon", symbol: "C", atomicNumber: 6, percentageInHumans: 18 },
+    { name: "Nitrogen", symbol: "N", atomicNumber: 7, percentageInHumans: 3.2},
+    { name: "Oxygen", symbol: "O", atomicNumber: 8, percentageInHumans: 65 },
+    { name: "Sodium", symbol: "Na", atomicNumber: 11, percentageInHumans: 0.2},
+    { name: "Maganese", symbol: "Mg", atomicNumber: 12, percentageInHumans: 0.1},
+    { name: "Phosphorus", symbol: "P", atomicNumber: 15, percentageInHumans: 1},
+    { name: "Sulfur", symbol: "S", atomicNumber: 16, percentageInHumans: 0.3},
+    { name: "Chlorine", symbol: "Cl", atomicNumber: 17, percentageInHumans: 0.2},
+    { name: "Potassium", symbol: "K", atomicNumber: 19, percentageInHumans: 0.4},
+    { name: "Calcium", symbol: "Ca", atomicNumber: 20, percentageInHumans: 1.5},
+];
+---
+
+<BaseLayout title="(Partial) list of elements in stardust" description="Listing all the elements present in stardust since 2024.">
+    <h1 class="text-4xl font-bold text-center my-8">Partial list of elements found in stardust</h1>
+    <h2 class="text-2xl text-center my-8">There's so many elements in stardust! Here's a small list of them and the percentage of them in humans:</h2>
+    <div class="flex flex-wrap justify-center">
+        {elements.map(element => (
+            <ElementBlock {...element} />
+        ))}
+    </div>
+    <p class="text-1xl text-center my-8">The amount of elements inside stardust is actually so big, it spans virtually the <i>entire periodic table!</i> Pretty amazing!</p>
+    <p class="text-1xl text-center">Oh, and just so you're aware, every other element not listed here forms less than 0.1% of a human.</p>
+</BaseLayout>
