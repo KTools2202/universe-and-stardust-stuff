@@ -52,7 +52,7 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm i --frozen-lockfile
 
         working-directory: ${{ env.BUILD_PATH }}
 
