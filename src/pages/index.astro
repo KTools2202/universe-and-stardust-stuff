@@ -1,16 +1,17 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro"
+import TextBlock from "../components/TextBlock.astro"
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Homepage" description="Learn about our relations to stardust!">
+	<main class="text-center">
+		<TextBlock>
+			We are all made of stardust. The elements that make up our bodies were forged in the hearts of stars billions of years ago.
+		<TextBlock />
+		<TextBlock>
+		  From the iron in our blood to the calcium in our bones, every atom in our bodies has a cosmic origin.
+		<TextBlock />
+		<TextBlock>
+		  Understanding our connection to the universe helps us appreciate the beauty and complexity of life.
+		<TextBlock />
+	</main>
+</BaseLayout>
