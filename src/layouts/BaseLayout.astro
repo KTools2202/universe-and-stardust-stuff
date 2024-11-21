@@ -6,14 +6,17 @@ import EmbedTags from "../components/EmbedTags.astro";
 interface Props {
     title: string;
     description: string;
+    hfit: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, hfit } = Astro.props;
 
 const meta = {
     title: `${title} | Humans and Stardust`,
     description: `${description}`
 }
+
+const divclass = `flex flex-col items-center justify-center text-white bg-black bg-opacity-50 ${hfit}`
 ---
 
 <!DOCTYPE html>
@@ -26,7 +29,7 @@ const meta = {
 </head>
 <body class="bg-cover bg-center h-screen" style="background-image: url('/background.jpg');">
   <Header />
-  <div class="flex flex-col items-center justify-center h-full text-white bg-black bg-opacity-50">
+  <div class={divclass}>
     <slot />
   </div>
   <Footer />

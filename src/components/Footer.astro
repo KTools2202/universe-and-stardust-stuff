@@ -1,17 +1,34 @@
 ---
 const currentYear = new Date().getFullYear();
 import { Github } from 'lucide-astro';
+import { Computer } from 'lucide-astro';
+import { Smartphone } from 'lucide-astro';
+import { Image } from 'lucide-astro';
+import { Download } from 'lucide-astro';
 ---
 
 <footer class="w-full text-center text-white p-4 border-t-4 border-indigo-500 bg-gradient-to-r from-purple-500 via-indigo-500 to-purple-500">
     <p>
         <span class="flex items-center justify-center space-x-2">
-            &copy; {currentYear} <span class="ml-1"> <a href="https://ktrain5369.me/" class="underline text-indigo-200">KTrain5369</a></span>
+            &copy; {currentYear} <span class="ml-1"> <a href="https://ktrain5369.me/" class="underline text-indigo-200">KTrain5369</a>.</span>
             <a href="https://github.com/KTools2202/universe-and-stardust-stuff" class="underline text-indigo-200">See the source code</a>
-            <Github class="w-6 h-6 text-indigo-200" />
+            <Github class="w-6 h-6 text-indigo-200" href="https://github.com/KTools2202/universe-and-stardust-stuff" />
         </span>
     </p>
-    <p>Background nebula image &copy; Aldebaran S. <a href="https://wallpaperscraft.com/download/nebula_stars_space_199080/3840x2400" class="underline text-indigo-200">Click here for image</a>.</p>
+    <p>
+        <span class="flex items-center justify-center space-x-2">
+            <Image class="w-6 h-6 text-indigo-200" />
+            <span class="ml-1">Background image &copy; Aldebaran S. <a href="https://wallpaperscraft.com/download/nebula_stars_space_199080/3840x2400" class="underline text-indigo-200">Click here for image download</a>.</span>
+            <Download class="w-6 h-6 text-indigo-200" />
+        </span>
+    </p>
 	<br>
-	<p>Built with Astro and TailwindCSS. GitHub icon by Lucide.</p>
+	<p>Built with Astro and TailwindCSS. Icons by Lucide.</p>
+    <span class="flex items-center justify-center space-x-2">
+        <span class="ml-1">This site was made for</span>
+        <Computer class="w-6 h-6 text-indigo-200" />
+        <span class="ml-1">computers. Compatibility for</span>
+        <Smartphone class="w-6 h-6 text-indigo-200" />
+        <span class="ml-1">smartphones not guaranteed.</span>
+    </span>
 </footer>

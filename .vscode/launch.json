@@ -6,6 +6,12 @@
       "name": "Development server",
       "request": "launch",
       "type": "node-terminal"
+    },
+    {
+      "command": "pnpm check .",
+      "name": "Check functionalilty & formatting",
+      "request": "launch",
+      "type": "node-terminal"
     }
   ]
 }

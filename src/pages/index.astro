@@ -1,9 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-import TextBlock from "../components/TextBlock.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TextBlock from "../components/TextBlock.astro";
+import { Star } from 'lucide-astro';
 ---
-<BaseLayout title="Homepage" description="Learn about our relations to stardust!">
+<BaseLayout title="Homepage" description="Learn about our relations to stardust!" hfit="h-full">
 	<main class="text-center">
+		<Star class="w-16 h-16 text-indigo-500 mx-auto mb-4" />
 		<TextBlock>
 		  We are all made of stardust. The elements that make up our bodies were forged in the hearts of stars billions of years ago.
 		<TextBlock />
