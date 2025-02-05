@@ -2,24 +2,23 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TextBlock from "../components/TextBlock.astro";
 import { Star } from 'lucide-astro';
+
+const TextBlocks = [
+	"We are all made of stardust. The elements that make up our bodies were forged in the hearts of stars billions of years ago.",
+	"From the iron in our blood to the calcium in our bones, every atom in our bodies has a cosmic origin.",
+	"Understanding our connection to the universe helps us appreciate the beauty and complexity of life.",
+	"Let's explore them a bit! Use the navigation links in the header.",
+	"(also the site is incomplete forgive me 🙏)"
+]
 ---
-<BaseLayout title="Homepage" description="Learn about our relations to stardust!" hfit="h-full">
+
+<BaseLayout title="Homepage" description="Learn about our relations to stardust!">
 	<main class="text-center">
 		<Star class="w-16 h-16 text-indigo-500 mx-auto mb-4" />
-		<TextBlock>
-		  We are all made of stardust. The elements that make up our bodies were forged in the hearts of stars billions of years ago.
-		<TextBlock />
-		<TextBlock>
-		  From the iron in our blood to the calcium in our bones, every atom in our bodies has a cosmic origin.
-		<TextBlock />
-		<TextBlock>
-		  Understanding our connection to the universe helps us appreciate the beauty and complexity of life.
-		<TextBlock />
-		<TextBlock>
-		  Let's explore them a bit! Use the navigation links in the header.
-		</TextBlock>
-		<TextBlock>
-		  (also the site is incomplete forgive me 🙏)
-		<TextBlock />
+		{TextBlocks.map(blocks => (
+			<TextBlock>
+				{blocks}
+			</TextBlock>
+		))}
 	</main>
 </BaseLayout>
